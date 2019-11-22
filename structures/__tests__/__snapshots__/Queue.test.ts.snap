@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Queue toString 1`] = `"(one, two, three, four)"`;

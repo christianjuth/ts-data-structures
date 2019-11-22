@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stack toString 1`] = `"(four, three, two, one)"`;

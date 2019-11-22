@@ -52,4 +52,11 @@ describe("HashTable", () => {
     });
   });
 
+  test("isEmpty", () => {
+    let list = new HashTable<number>();
+    expect(list.isEmpty()).toBe(true);
+    list.add(0);
+    expect(list.isEmpty()).toBe(false);
+  });
+
 });

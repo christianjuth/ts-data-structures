@@ -139,4 +139,17 @@ describe("LinkedList", () => {
     expect(list.length()).toBe(0);
   });
 
+  test("isEmpty", () => {
+    let list = new LinkedList<number>();
+    expect(list.isEmpty()).toBe(true);
+    list.shift(2);
+    expect(list.isEmpty()).toBe(false);
+    list.unshift();
+    expect(list.isEmpty()).toBe(true);
+    list.push(2);
+    expect(list.isEmpty()).toBe(false);
+    list.pop();
+    expect(list.isEmpty()).toBe(true);
+  });
+
 });

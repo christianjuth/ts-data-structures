@@ -5,17 +5,22 @@
   "scripts": {
     "start": "ts-node .",
     "dev": "ts-node-dev --no-notify --respawn --transpileOnly ./main.ts",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "docs": "typedoc --theme minimal --target ES6 --excludePrivate --exclude '**/*+(index|.test).ts' --out docs/ structures/",
+    "predeploy": "yarn run docs",
+    "deploy": "gh-pages -d docs"
   },
   "license": "MIT",
   "dependencies": {
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.11",
+    "gh-pages": "^2.1.1",
     "husky": "^3.1.0",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.5.2",
     "ts-node-dev": "^1.0.0-pre.44",
+    "typedoc": "^0.15.2",
     "typescript": "^3.3.3"
   },
   "husky": {
